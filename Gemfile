@@ -9,6 +9,9 @@ gem "rails", "~> 7.0.4"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
+# simple form
+gem "simple_form", github: "heartcombo/simple_form"
+
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
 
