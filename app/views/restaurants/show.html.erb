@@ -1,0 +1,27 @@
+<div class="container show m-5">
+  <h3><%= @restaurant.name %></h3>
+
+  <hr>
+  <h5>Address:</h5>
+  <p class="info"><%= @restaurant.address %></p>
+
+  <h5>Category:</h5>
+  <p class="info"><%= @restaurant.category.capitalize %></p>
+
+  <%= link_to "Create review", new_restaurant_review_path(@restaurant), class: "btn btn-outline-primary" %>
+
+  <hr>
+
+  <h5 class="mt-5">Reviews:</h5>
+
+  <% @restaurant.reviews.each do |review| %>
+    <div class="rating">
+      <h6>Content: <%= review.content %></h6>
+      <div class="d-flex">
+        <% review.rating.times do %>
+          <p>⭐</p>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

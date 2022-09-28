@@ -1,0 +1,16 @@
+<div class="container m-5">
+
+  <h1>Restaurants</h1>
+  <hr>
+
+  <div id="restaurants">
+    <ul>
+      <% @restaurants.each do |restaurant| %>
+        <li> <%= link_to restaurant.name, restaurant_path(restaurant) %> </li>
+        <hr>
+      <% end %>
+    </ul>
+  </div>
+
+  <%= link_to "Create new restaurant", new_restaurant_path, class: 'btn btn-outline-primary' %>
+</div>

@@ -3,4 +3,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  root 'restaurants#index' # root que sea mostrar todos los restaurants
+  resources :restaurants, only: [:index, :show, :new, :create] do
+    resources :reviews, only: [:new, :create]
+  end
 end
